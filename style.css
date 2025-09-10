@@ -1,0 +1,39 @@
+:root{
+  --bg:#87CEEB;
+  --card-bg: rgba(255,255,255,0.95);
+  --accent:#ff6b6b;
+  --muted:#666;
+  --ui-padding:14px;
+  --round:12px;
+}
+
+*{box-sizing:border-box}
+html,body,#container{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+body{background:linear-gradient(#87CEEB,#e0f7ff);display:flex;align-items:center;justify-content:center;padding:12px}
+
+/* Canvas container */
+#container{width:100%;max-width:900px;position:relative}
+canvas{display:block;width:100%;height:auto;background:linear-gradient(#87CEEB,#dcf7ff);border-radius:12px;box-shadow:0 12px 30px rgba(20,30,40,0.15)}
+header{position:absolute;right:12px;top:12px;z-index:30}
+#top-score{background:rgba(255,255,255,0.9);padding:8px 12px;border-radius:999px;font-weight:600;box-shadow:0 6px 18px rgba(10,20,40,0.08)}
+
+/* overlays (lobby, info, game over) */
+.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:40}
+.hidden{display:none}
+.card{background:var(--card-bg);padding:22px;border-radius:var(--round);min-width:260px;max-width:420px;text-align:center;box-shadow:0 10px 30px rgba(20,30,40,0.12)}
+.card h1{margin:0 0 6px;font-size:28px}
+.card h2{margin:4px 0 8px}
+input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6;margin:12px 0;font-size:16px}
+.buttons{display:flex;gap:10px;justify-content:center;margin:8px 0}
+button{padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+.primary{background:var(--accent);color:#fff}
+.secondary{background:#f1f1f1;color:#111}
+.small{color:var(--muted);font-size:13px;margin-top:8px}
+
+/* Responsive height */
+@media (min-aspect-ratio: 3/4) {
+  canvas{height:600px}
+}
+@media (max-aspect-ratio: 3/4) {
+  canvas{height:760px}
+}
