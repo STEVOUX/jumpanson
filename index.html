@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flappy Fart — BharatGas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="top-score">Top: 0</div>
+    </header>
+
+    <!-- Canvas area -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Lobby -->
+    <div id="lobby" class="overlay">
+      <div class="card">
+        <h1>Flappy Fart</h1>
+        <input id="playerName" type="text" placeholder="Enter name" />
+        <div class="buttons">
+          <button id="playBtn" class="primary">Play</button>
+          <button id="infoBtn" class="secondary">Info</button>
+        </div>
+        <p class="small">Tip: Tap/click or press SPACE to fart & fly!</p>
+      </div>
+    </div>
+
+    <!-- Info modal -->
+    <div id="infoModal" class="overlay hidden">
+      <div class="card">
+        <h2>Info</h2>
+        <p>Made by <strong>Steve</strong><br>
+           Idea by <strong>Alwin</strong></p>
+        <p><em>No One Is Hurt while making this game</em></p>
+        <button id="closeInfo" class="primary">Back</button>
+      </div>
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div id="gameOver" class="overlay hidden">
+      <div class="card">
+        <h2>Game Over</h2>
+        <p id="finalScore">Score: 0</p>
+        <p id="bestScore">Best: 0</p>
+        <button id="retryBtn" class="primary">Play Again</button>
+        <button id="toLobbyBtn" class="secondary">Main Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
